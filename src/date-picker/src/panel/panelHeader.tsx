@@ -22,6 +22,10 @@ export default defineComponent({
       type: Boolean,
       required: true
     },
+    closePanelOnSelectDate: {
+      type: Boolean,
+      required: true
+    },
     calendarMonth: {
       type: String,
       required: true
@@ -35,7 +39,7 @@ export default defineComponent({
       required: true
     }
   },
-  setup () {
+  setup (props) {
     const triggerRef = ref<HTMLElement | null>(null)
     const monthPanelRef = ref<InstanceType<typeof MonthPanel> | null>(null)
     const showRef = ref(false)
@@ -50,12 +54,18 @@ export default defineComponent({
     function handleHeaderClick (): void {
       showRef.value = !showRef.value
     }
+    function handleClosePanelOnSelectDate (): void {
+      if (props.closePanelOnSelectDate) {
+        showRef.value = false
+      }
+    }
     return {
       show: showRef,
       triggerRef,
       monthPanelRef,
       handleHeaderClick,
-      handleClickOutside
+      handleClickOutside,
+      handleClosePanelOnSelectDate
     }
   },
   render () {
@@ -103,6 +113,7 @@ export default defineComponent({
                                   key="month"
                                   useAsQuickJump
                                   value={this.value}
+                                  onClick={this.handleClosePanelOnSelectDate}
                                 />,
                                 [
                                   [

@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## NEXT_VERSION
+
+### Features
+
+- `n-date-picker` adds `closePanelOnSelectDate` prop.
+
 ## 2.37.3
 
 ### Fixes

@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## NEXT_VERSION
+
+### Features
+
+- `n-date-picker` 新增 `closePanelOnSelectDate` 属性
+
 ## 2.37.3
 
 ### Fixes

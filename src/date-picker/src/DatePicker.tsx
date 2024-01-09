@@ -87,6 +87,7 @@ export const datePickerProps = {
     default: undefined
   },
   clearable: Boolean,
+  closePanelOnSelectDate: Boolean,
   updateValueOnClose: Boolean,
   defaultValue: [Number, Array] as PropType<Value | null>,
   defaultFormattedValue: [String, Array] as PropType<FormattedValue | null>,
@@ -1018,6 +1019,7 @@ export default defineComponent({
       defaultTime: this.defaultTime,
       themeClass: this.themeClass,
       panel: this.panel,
+      closePanelOnSelectDate: this.closePanelOnSelectDate,
       onRender: this.onRender,
       onNextMonth: this.onNextMonth,
       onPrevMonth: this.onPrevMonth,

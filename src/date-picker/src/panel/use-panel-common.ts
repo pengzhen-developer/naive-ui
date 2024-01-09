@@ -21,6 +21,7 @@ const TIME_FORMAT = 'HH:mm:ss'
 
 const usePanelCommonProps = {
   active: Boolean,
+  closePanelOnSelectDate: Boolean,
   dateFormat: String,
   timeFormat: {
     type: String,
