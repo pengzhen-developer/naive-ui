@@ -24,7 +24,7 @@ export default defineComponent({
     },
     closePanelOnSelectDate: {
       type: Boolean,
-      required: true
+      default: false
     },
     calendarMonth: {
       type: String,
