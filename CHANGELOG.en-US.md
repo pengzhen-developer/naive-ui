@@ -6,6 +6,11 @@
 
 - `n-date-picker` adds `closePanelOnSelectDate` prop.
 
+### Fixes
+
+- Fix `n-tree`'s `override-default-node-click-behavior` prop may conflict with default switcher click or checkbox click behavior.
+
+
 ## 2.37.3
 
 ### Fixes

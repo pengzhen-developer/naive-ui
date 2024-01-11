@@ -6,6 +6,11 @@
 
 - `n-date-picker` 新增 `closePanelOnSelectDate` 属性
 
+### Fixes
+
+- 修复 `n-tree` 的 `override-default-node-click-behavior` 属性可能覆盖掉默认展开按钮和选中按钮的行为
+
+
 ## 2.37.3
 
 ### Fixes
