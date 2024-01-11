@@ -60,7 +60,6 @@ form-debug.vue
 | value | `number \| [number, number] \| null` | `undefined` | Date Picker 的值 |  |
 | value-format | `string` | 跟随 `format` 属性 | 绑定值的格式，详情见 [format](https://date-fns.org/v2.23.0/docs/format) |
 | year-format | `string` | `'y'` | 设置面板中年的显示方式，详情见 [format](https://date-fns.org/v2.23.0/docs/format) | 2.37.0 |
-| close-panel-on-select-date | `boolean` | 选择年月后，关闭年月面板 |  |
 | on-clear | `() => void` | `undefined` | 用户 clear 时执行的回调 | 2.28.3 |
 | on-confirm | `(value: number \| [number, number] \| null, formattedValue: string \| [string, string] \| null) => void` | `undefined` | 用户 confirm 时执行的回调 | 2.28.3 |
 | on-blur | `() => void` | `undefined` | 用户 blur 时执行的回调 |  |
@@ -79,6 +78,7 @@ form-debug.vue
 | format | `string` | `'yyyy-MM-dd'` | 时间格式化字符串，详情见 [format](https://date-fns.org/v2.23.0/docs/format) |  |
 | is-date-disabled | `(current: number, detail: { type: 'date', year: number, month: number, date: number } \| { type: 'month', year: number, month: number } \| { type: 'year', year: number } \| { type: 'quarter',  year: number, quarter: number } \| { type: 'input' }) => boolean` | `undefined` | 日期禁用的校验函数 | `detail` 2.37.1 |
 | placeholder | `string` | `'选择日期'` | 没有值时的占位信息 |  |
+| close-panel-on-select-date | `boolean` | 选择年月后，关闭年月面板 |  |
 | on-update:formatted-value | `(value: string \| null, timestampValue: number \| null) => void` | `undefined` | 受控数据更新时触发的回调函数 | 2.24.0 |
 | on-update:value | `(value: number \| null, formattedValue: string \| null) => void` | `undefined` | 受控数据更新时触发的回调函数 | `formattedValue` 2.24.0 |
 
@@ -94,6 +94,7 @@ form-debug.vue
 | placeholder | `string` | `'选择日期时间'` | 提示信息 |  |
 | time-picker-props | `TimePickerProps` | `undefined` | 面板中时间选择器的属性 | 2.27.0 |
 | update-value-on-close | `boolean` | `false` | 关闭面板时更新值 |  |
+| close-panel-on-select-date | `boolean` | 选择年月后，关闭年月面板 |  |
 | on-update:formatted-value | `(value: string \| null, timestampValue: number \| null) => void` | `undefined` | 数据更新时触发的回调函数 | 2.24.0 |
 | on-update:value | `(value: number \| null, formattedValue: string \| null) => void` | `undefined` | 数据更新时触发的回调函数 | `formattedValue` 2.24.0 |
 
@@ -112,6 +113,7 @@ form-debug.vue
 | separator | `string` | 内置图标 | start 选框与 end 选框之间的分隔符 |  |
 | start-placeholder | `string` | `'开始日期'` | DateRange 中 start 选框的提示信息 |  |
 | update-value-on-close | `boolean` | `false` | 关闭面板时是否更新值 |  |
+| close-panel-on-select-date | `boolean` | 选择年月后，关闭年月面板 |  |
 | on-update:formatted-value | `(value: [string, string] \| null, timestampValue: [number, number] \| null) => void` | `undefined` | 数据更新时触发的回调函数 | 2.24.0 |
 | on-update:value | `(value: [number, number] \| null, formattedValue: [string, string] \| null) => void` | `undefined` | 数据更新时触发的回调函数 | `formattedValue` 2.24.0 |
 
@@ -132,6 +134,7 @@ form-debug.vue
 | start-placeholder | `string` | `'开始日期时间'` | DateTimeRange 中 start 选框的提示信息 |  |
 | time-picker-props | `TimePickerProps \| [TimePickerProps, TimePickerProps]` | `undefined` | 面板中时间选择器的属性 | 2.27.0 |
 | update-value-on-close | `boolean` | `false` | 关闭面板时是否更新值 |  |
+| close-panel-on-select-date | `boolean` | 选择年月后，关闭年月面板 |  |
 | on-update:formatted-value | `(value: [string, string] \| null, timestampValue: [number, number] \| null) => void` | `undefined` | 数据更新时触发的回调函数 | 2.24.0 |
 | on-update:value | `(value: [number, number] \| null, formattedValue: [string, string] \| null) => void` | `undefined` | 数据更新时触发的回调函数 | `formattedValue` 2.24.0 |
 
@@ -178,6 +181,7 @@ form-debug.vue
 | actions | `Array<'clear' \| 'now'> \| null` | `['clear', 'now']` | Week 类型的 Date Picker 中支持的操作 | 2.37.0 |
 | format | `string` | 中文为 `'yyyy-w'`，随语言变化 | 时间格式化字符串，详情见 [format](https://date-fns.org/v2.23.0/docs/format) | 2.37.0 |
 | placeholder | `string` | 中文为 `'选择周'`，随语言变化 | 没有值时的占位信息 | 2.37.0 |
+| close-panel-on-select-date | `boolean` | 选择年月后，关闭年月面板 |  |
 | on-update:formatted-value | `(value: string \| null, timestampValue: number \| null) => void` | `undefined` | 受控数据更新时触发的回调函数 | 2.37.0 |
 | on-update:value | `(value: number \| null, formattedValue: string \| null) => void` | `undefined` | 受控数据更新时触发的回调函数 | 2.37.0 |
 

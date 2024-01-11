@@ -59,7 +59,6 @@ close-panel-on-select-date.vue
 | value | `number \| [number, number] \| null` | `undefined` | Value of the date picker when being manually set. |  |
 | value-format | `string` | Follow `format` prop | Format of the binding value. See [format](https://date-fns.org/v2.23.0/docs/format). | 2.24.0 |
 | year-format | `string` | `'y'` | Format of year item in the panel. See [format](https://date-fns.org/v2.23.0/docs/format). | 2.37.0 |
-| close-panel-on-select-date | `boolean` | After selecting the year and month, close the year and month panel |  |
 | on-clear | `() => void` | `undefined` | On clear callback. | 2.28.3 |
 | on-confirm | `(value: number \| [number, number] \| null, formattedValue: string \| [string, string] \| null) => void` | `undefined` | On confirm callback. | 2.28.3 |
 | on-blur | `() => void` | `undefined` | On blur callback. |  |
@@ -78,6 +77,7 @@ close-panel-on-select-date.vue
 | format | `string` | `'yyyy-MM-dd'` | Format of the input. For detail please see [format](https://date-fns.org/v2.23.0/docs/format). |  |
 | is-date-disabled | `(current: number, detail: { type: 'date', year: number, month: number, date: number } \| { type: 'month', year: number, month: number } \| { type: 'year', year: number } \| { type: 'quarter',  year: number, quarter: number } \| { type: 'input' }) => boolean` | `() => false` | Validator of the date. | `detail` 2.37.1 |
 | placeholder | `string` | `'Select Date'` | Placeholder. |  |
+| close-panel-on-select-date | `boolean` | After selecting the year and month, close the year and month panel |  |
 | on-update:formatted-value | `(value: string \| null, timestampValue: number \| null) => void` | `undefined` | Date selected callback. | 2.24.0 |
 | on-update:value | `(value: number \| null, formattedValue: string \| null) => void` | `undefined` | Date selected callback. | `formattedValue` 2.24.0 |
 
@@ -93,6 +93,7 @@ close-panel-on-select-date.vue
 | placeholder | `string` | `'Select Date and Time'` | Placeholder. |  |
 | time-picker-props | `TimePickerProps` | `undefined` | Time picker props in the panel. | 2.27.0 |
 | update-value-on-close | `boolean` | `false` | Whether to update value on close. |  |
+| close-panel-on-select-date | `boolean` | After selecting the year and month, close the year and month panel |  |
 | on-update:formatted-value | `(value: string \| null, timestampValue: number \| null) => void` | `undefined` | Date selected callback. | MEXT_VERSION |
 | on-update:value | `(value: number \| null, formattedValue: string \| null) => void` | `undefined` | Date selected callback. | `formattedValue` 2.24.0 |
 
@@ -112,6 +113,7 @@ close-panel-on-select-date.vue
 | separator | `string` | internal icon | The separator between the start input and the end input. |  |
 | start-placeholder | `string` | `'Start Date'` | The prompt information at the beginning of the input. |  |
 | update-value-on-close | `boolean` | `false` | Whether to update the value on close. |  |
+| close-panel-on-select-date | `boolean` | After selecting the year and month, close the year and month panel |  |
 | on-update:formatted-value | `(value: [string, string] \| null, timestampValue: [number, number] \| null) => void` | `undefined` | Formatted range changed callback. | 2.24.0 |
 | on-update:value | `(value: [number, number] \| null, formattedValue: [string, string] \| null) => void` | `undefined` | Range changed callback. | `formattedValue` 2.24.0 |
 
@@ -132,6 +134,7 @@ close-panel-on-select-date.vue
 | start-placeholder | `string` | `'Start Date and Time'` | The prompt information at the beginning of the input. |  |
 | time-picker-props | `TimePickerProps \| [TimePickerProps, TimePickerProps]` | `undefined` | Time picker props in the panel. | 2.27.0 |
 | update-value-on-close | `boolean` | `false` | Whether to update value on close. |  |
+| close-panel-on-select-date | `boolean` | After selecting the year and month, close the year and month panel |  |
 | on-update:formatted-value | `(value: [string, string] \| null, timestampValue: [number, number] \| null) => void` | `undefined` | Formatted value changed callback. | 2.24.0 |
 | on-update:value | `(value: [number, number] \| null, formattedValue: [string, string] \| null) => void` | `undefined` | Value changed callback. | `formattedValue` 2.24.0 |
 
@@ -178,6 +181,7 @@ close-panel-on-select-date.vue
 | actions | `Array<'clear' \| 'now'> \| null` | `['clear', 'now']` | Operations supported for the `week` type date picker. | 2.37.0 |
 | format | `string` | `'yyyy-w'` for en-US, Locale specific. | Format of the input. For detail please see [format](https://date-fns.org/v2.23.0/docs/format). | 2.37.0 |
 | placeholder | `string` | `'Select Week'` for en-US, Locale specific. | Placeholder. | 2.37.0 |
+| close-panel-on-select-date | `boolean` | After selecting the year and month, close the year and month panel |  |
 | on-update:formatted-value | `(value: string \| null, timestampValue: number \| null) => void` | `undefined` | Formatted value changed callback. | 2.37.0 |
 | on-update:value | `(value: number \| null, formattedValue: string \| null) => void` | `undefined` | Value changed callback. | 2.37.0 |
 
