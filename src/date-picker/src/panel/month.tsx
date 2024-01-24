@@ -102,6 +102,12 @@ export default defineComponent({
               `${mergedClsPrefix}-date-panel-month-calendar__picker-col-item--disabled`
           ]}
           onClick={() => {
+            if (item.type === 'month') {
+              props.onSelectMonth?.()
+            } else if (item.type === 'year') {
+              props.onSelectYear?.()
+            }
+
             useAsQuickJump
               ? handleQuickMonthClick(item, (value) => {
                 ;(props.onUpdateValue as OnPanelUpdateValueImpl)(value, false)
@@ -139,7 +145,6 @@ export default defineComponent({
           !this.panel && `${mergedClsPrefix}-date-panel--shadow`,
           this.themeClass
         ]}
-        onClick={this.onClick}
         onFocus={this.handlePanelFocus}
         onKeydown={this.handlePanelKeyDown}
       >

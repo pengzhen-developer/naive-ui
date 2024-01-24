@@ -22,7 +22,11 @@ export default defineComponent({
       type: Boolean,
       required: true
     },
-    closePanelOnSelectDate: {
+    closePanelOnSelectYear: {
+      type: Boolean,
+      default: false
+    },
+    closePanelOnSelectMonth: {
       type: Boolean,
       default: false
     },
@@ -54,8 +58,13 @@ export default defineComponent({
     function handleHeaderClick (): void {
       showRef.value = !showRef.value
     }
-    function handleClosePanelOnSelectDate (): void {
-      if (props.closePanelOnSelectDate) {
+    function handleClosePanelOnSelectYear (): void {
+      if (props.closePanelOnSelectYear) {
+        showRef.value = false
+      }
+    }
+    function handleClosePanelOnSelectMonth (): void {
+      if (props.closePanelOnSelectMonth) {
         showRef.value = false
       }
     }
@@ -65,7 +74,8 @@ export default defineComponent({
       monthPanelRef,
       handleHeaderClick,
       handleClickOutside,
-      handleClosePanelOnSelectDate
+      handleClosePanelOnSelectYear,
+      handleClosePanelOnSelectMonth
     }
   },
   render () {
@@ -113,7 +123,12 @@ export default defineComponent({
                                   key="month"
                                   useAsQuickJump
                                   value={this.value}
-                                  onClick={this.handleClosePanelOnSelectDate}
+                                  onSelectYear={
+                                    this.handleClosePanelOnSelectYear
+                                  }
+                                  onSelectMonth={
+                                    this.handleClosePanelOnSelectMonth
+                                  }
                                 />,
                                 [
                                   [

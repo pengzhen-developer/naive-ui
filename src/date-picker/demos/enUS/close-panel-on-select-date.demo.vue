@@ -1,34 +1,41 @@
 <markdown>
-# After selecting the year and month, close the year and month panel.
+# After selected the year or month, close the panel.
 </markdown>
 
 <template>
   <n-space vertical>
+    <span>After selected the year or month, close the panel.</span>
     <n-date-picker
       v-model:value="timestamp"
-      close-panel-on-select-date
+      close-panel-on-select-year
+      close-panel-on-select-month
       type="date"
     />
+    <span>After selected the year, close the panel.</span>
     <n-date-picker
       v-model:value="timestamp"
-      close-panel-on-select-date
+      close-panel-on-select-year
       type="datetime"
     />
+    <span>After selected the month, close the panel.</span>
     <n-date-picker
       v-model:value="timestamp"
-      close-panel-on-select-date
+      close-panel-on-select-month
       type="week"
       clearable
     />
     <pre>{{ JSON.stringify(timestamp) }}</pre>
+
+    <span>After selected the year, close the panel.</span>
     <n-date-picker
       v-model:value="range"
-      close-panel-on-select-date
+      close-panel-on-select-year
       type="daterange"
     />
+    <span>After selected the month, close the panel.</span>
     <n-date-picker
       v-model:value="range"
-      close-panel-on-select-date
+      close-panel-on-select-month
       type="datetimerange"
     />
     <pre>{{ JSON.stringify(range) }}</pre>

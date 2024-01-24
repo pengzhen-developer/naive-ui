@@ -4,7 +4,8 @@
 
 ### Features
 
-- `n-date-picker` adds `closePanelOnSelectDate` prop.
+- `n-date-picker` adds `closePanelOnSelectYear` prop.
+- `n-date-picker` adds `closePanelOnSelectMonth` prop.
 
 ### Fixes
 
@@ -25,7 +26,6 @@
 ### i18n
 
 - Add `etEE` locale.
-
 
 ## 2.37.3
 
@@ -84,7 +84,6 @@
 - Fix `n-input` click clear icon to trigger twice when using the `clearable`, closes [#5510](https://github.com/tusen-ai/naive-ui/issues/5510).
 - Fix `n-tabs` may miss over-scroll shadow if `placement` is `'left'` or `'right'`.
 - Fix `n-date-picker` with range type can input start time that is later than end time, closes [#5544](https://github.com/tusen-ai/naive-ui/issues/5544).
-
 
 ### Features
 

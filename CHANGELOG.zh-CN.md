@@ -4,7 +4,8 @@
 
 ### Features
 
-- `n-date-picker` 新增 `closePanelOnSelectDate` 属性
+- `n-date-picker` 新增 `closePanelOnSelectYear` 属性
+- `n-date-picker` 新增 `closePanelOnSelectMonth` 属性
 
 ### Fixes
 
@@ -25,7 +26,6 @@
 ### i18n
 
 - 新增 `etEE` locale
-
 
 ## 2.37.3
 
