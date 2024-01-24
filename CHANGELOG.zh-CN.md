@@ -9,6 +9,22 @@
 ### Fixes
 
 - 修复 `n-tree` 的 `override-default-node-click-behavior` 属性可能覆盖掉默认展开按钮和选中按钮的行为
+- Fix `n-scrollbar`'s typo on `aria-hidden` attribute.
+- 修复 `n-menu` `root-indent` `indent` 下内容溢出的问题，关闭 #5616
+- 修复 `n-form-item` 校验结果可能会闪烁的问题，关闭 [#5583](https://github.com/tusen-ai/naive-ui/issues/5583)
+- 修复 `n-popselect` 组件的 header 插槽里 input 无法输入，关闭 [#5494](https://github.com/tusen-ai/naive-ui/pull/5494)
+
+### Features
+
+- `n-auto-complete` 新增 `append` 属性
+- `n-select` 在组件可过滤且输入失焦时，添加原生 `title` 属性
+- `n-split` 新增 `size` 和 `on-update:size` 属性
+- `n-split` 新增 `watch-props` 属性，关闭 [#5526](https://github.com/tusen-ai/naive-ui/issues/5526)
+- `n-drawer` 新增 `borderRadius` 主题变量
+
+### i18n
+
+- 新增 `etEE` locale
 
 
 ## 2.37.3
@@ -65,6 +81,7 @@
 - 修复 `n-avatar` 懒加载和懒加载失败时 `fallback-src` 属性都不生效，关闭 [#5007](https://github.com/tusen-ai/naive-ui/issues/5007)
 - <del>修复 `n-split` 不在卡片中使用没有颜色</del>
 - 修复 `n-card` 的 `footer-class` 属性不生效
+- 修复 `n-input` 在使用 `clearable` 时点击触发两次的问题，关闭 [#5510](https://github.com/tusen-ai/naive-ui/issues/5510)
 - 修复 `n-tabs` 在 `placement` 为 `'left'` 和 `'right'` 时初始化滚动阴影可能不正确
 - 修复 `n-date-picker` 在范围类型下，可以通过输入框使开始时间大于结束时间，关闭 [#5544](https://github.com/tusen-ai/naive-ui/issues/5544)
 
@@ -95,6 +112,9 @@
 - `n-tree-select` 新增 `ellipsis-tag-popover-props` 属性
 - `n-avatar-group` 新增 `expand-on-hover` 属性
 - `n-tabs` 新增 `tab-class`、`add-tab-style`、`add-tab-class` 属性
+- `n-tree` 新增 `override-default-node-click-behavior` 属性
+- `n-tree-select` 新增 `override-default-node-click-behavior` 属性
+- 新增 `n-flex` 组件
 - `n-pagination` 新增 `show-quick-jump-dropdown` 属性，关闭 [#5251](https://github.com/tusen-ai/naive-ui/issues/5251)
 
 ## 2.36.0

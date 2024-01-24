@@ -9,6 +9,22 @@
 ### Fixes
 
 - Fix `n-tree`'s `override-default-node-click-behavior` prop may conflict with default switcher click or checkbox click behavior.
+- Fix `n-scrollbar`'s typo on `aria-hidden` attribute.
+- Fix overflow issue with `n-menu` `root-indent` `indent`, closes (#5616)
+- Fix `n-form-item`'s feedback may hide and show again, closes [#5583](https://github.com/tusen-ai/naive-ui/issues/5583).
+- Fix `n-popselect`'s header make inner input unavailable, closes [#5494](https://github.com/tusen-ai/naive-ui/pull/5494).
+
+### Features
+
+- `n-auto-complete` adds `append` prop.
+- `n-select` add native `title` attribute when `filterable` and blur input.
+- `n-split` adds `size` prop and `on-update:size` prop.
+- `n-split` adds `watch-props` prop, closes [#5526](https://github.com/tusen-ai/naive-ui/issues/5526).
+- `n-drawer` adds `borderRadius` theme variable.
+
+### i18n
+
+- Add `etEE` locale.
 
 
 ## 2.37.3
@@ -65,8 +81,10 @@
 - Fix `n-avatar`'s lazy loading and `fallback-src` prop not working when load error in lazy, closes [#5007](https://github.com/tusen-ai/naive-ui/issues/5007).
 - <del>Fix `n-split` has no color if it's not used in a card.</del>
 - Fix `n-card` `footer-class` prop not working.
+- Fix `n-input` click clear icon to trigger twice when using the `clearable`, closes [#5510](https://github.com/tusen-ai/naive-ui/issues/5510).
 - Fix `n-tabs` may miss over-scroll shadow if `placement` is `'left'` or `'right'`.
 - Fix `n-date-picker` with range type can input start time that is later than end time, closes [#5544](https://github.com/tusen-ai/naive-ui/issues/5544).
+
 
 ### Features
 
@@ -94,6 +112,9 @@
 - `n-tree-select` adds `ellipsis-tag-popover-props` prop.
 - `n-avatar-group` adds `expand-on-hover` prop.
 - `n-tabs` adds `tab-class`, `add-tab-style` and `add-tab-class` props.
+- `n-tree` adds `override-default-node-click-behavior` prop.
+- `n-tree-select` adds `override-default-node-click-behavior` prop.
+- Adds `n-flex` component.
 - `n-pagination` adds `show-quick-jump-dropdown` prop, closes [#5251](https://github.com/tusen-ai/naive-ui/issues/5251).
 
 ## 2.36.0
